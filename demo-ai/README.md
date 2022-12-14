@@ -1,0 +1,1 @@
+# Artificial Intelligence (AI) Demo Plugin for ATAK-CIV
