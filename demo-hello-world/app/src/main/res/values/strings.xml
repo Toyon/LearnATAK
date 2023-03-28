@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hello World Learn ATAK</string>
+    <string name="app_desc">This plugin demonstrates Android and ATAK API fundamentals</string>
+
+    <!-- Core Components Tab -->
+    <string name="gravity_label">Active Gravity</string>
+    <string name="atak_logo">ATAK Logo</string>
+    <string name="notify_via_atak">ATAK Notify</string>
+    <string name="notify_via_android">Android Notify</string>
+    <string name="start_service">Start Service</string>
+    <string name="gravity_left">Left</string>
+    <string name="gravity_center">Center</string>
+    <string name="gravity_right">Right</string>
+
+
+    <!-- Layouts Tab -->
+    <string name="atak_side_pane">ATAK Side Pane</string>
+    <string name="display_fullscreen">Fullscreen</string>
+    <string name="display_side_half">Side Half</string>
+    <string name="display_side_third">Side Third</string>
+    <string name="display_bottom_half">Bottom Half</string>
+    <string name="display_bottom_third">Bottom Third</string>
+    <string name="layout_android">Android Layouts</string>
+    <string name="layout_relative">Relative Layout</string>
+    <string name="layout_constraint">Constraint Layout</string>
+    <string name="programmatic_recycler_view">Recycler View (Dynamically Added)</string>
+        <!-- Position Descriptions for Relative & Constraint Layouts -->
+        <string name="center">Center</string>
+        <string name="tl_parent">TL Parent</string> <!-- TL: Top Left -->
+        <string name="tr_parent">TR Parent</string> <!-- TR: Top Right -->
+        <string name="bl_parent">BL Parent</string> <!-- BL: Bottom Left -->
+        <string name="br_parent">BR Parent</string> <!-- BR: Bottom Right -->
+        <string name="align_right_above_ref">Align Right &amp; Above Object</string>
+        <string name="align_start_below_ref">Align Start &amp; Below Object</string>
+        <string name="align_top_left_ref">Align Top &amp; Left of</string>
+        <string name="align_bottom_left_ref">Align Bottom &amp; Left of</string>
+        <string name="align_baseline_right_ref">Baseline &amp; Right of</string>
+
+
+    <!-- Map Tab -->
+    <string name="map_category_icon_model">Map Icons, Models, &amp; Markers</string>
+    <string name="map_icon">Map Icons</string>
+    <string name="vehicle_models">Vehicle Models</string>
+    <string name="marker_car">Car Marker</string>
+    <string name="marker_cot">CoT Marker</string>
+    <string name="map_category_zoom">Zoom Levels</string>
+    <string name="map_category_tilt">Title / Pitch Angles</string>
+    <string name="map_category_layer_draw">Layers &amp; Drawing</string>
+    <string name="add_image_layer">Add Image Layer</string>
+    <string name="remove_image_layer">Remove Image Layer</string>
+    <string name="add_rectangle">Add Rectangle</string>
+    <string name="map_category_routes">Routes</string>
+    <string name="add_walk_route">Add Walking Route</string>
+    <string name="add_fly_route">Add Fly Route</string>
+    <string name="start_fly">Start Flight</string>
+    <string name="stop_fly">Stop Flight</string>
+    <string name="focus_model">Focus F-35</string>
+
+
+    <!-- Icon and Vehicle Model Panes -->
+    <string name="select_filter_icon">Select "Group Name" to view available map icons</string>
+    <string name="select_filter_model">Select "Category" to view available models</string>
+    <string name="help_exit_pane">Press the back navigation button to exit.</string>
+    <!-- Notification -->
+    <string name="notify_channel_name">LearnATAK Hello World</string>
+    <string name="notify_channel_desc">Notification Channel for LearnATAK Hello World plugin</string>
+
+
+</resources>

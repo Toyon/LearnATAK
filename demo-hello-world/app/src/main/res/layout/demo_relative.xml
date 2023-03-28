@@ -1,0 +1,121 @@
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#4E0606">
+
+    <TextView
+        android:id="@+id/relative_item_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#0A054A"
+        android:padding="16dp"
+        android:text="@string/center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#176E09"
+        android:text="@string/tl_parent"
+        android:textColor="#E0E0E0"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#176E09"
+        android:text="@string/tr_parent"
+        android:textColor="#E0E0E0"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#176E09"
+        android:text="@string/bl_parent"
+        android:textColor="#E0E0E0"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#176E09"
+        android:text="@string/br_parent"
+        android:textColor="#E0E0E0"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relative_item_center"
+        android:layout_alignEnd="@+id/relative_item_center"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#096B6E"
+        android:text="@string/align_right_above_ref"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/relative_item_center"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/relative_item_center"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#096E4B"
+        android:text="@string/align_top_left_ref"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/relative_item_center"
+        android:layout_toEndOf="@+id/relative_item_center"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#096B6E"
+        android:text="@string/align_baseline_right_ref"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relative_item_center"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="-2dp"
+        android:layout_toStartOf="@+id/relative_item_center"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#096B6E"
+        android:text="@string/align_bottom_left_ref"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_item_center"
+        android:layout_alignStart="@+id/relative_item_center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_rect"
+        android:backgroundTint="#096B6E"
+        android:text="@string/align_start_below_ref"
+        android:textColor="#E0E0E0"
+        android:textSize="12sp" />
+
+</android.widget.RelativeLayout>

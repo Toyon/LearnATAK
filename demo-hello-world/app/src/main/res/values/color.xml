@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- COMMON -->
+    <color name="white">#ffffff</color>
+    <color name="darker_gray">#121212</color>
+
+    <color name="android_green">#78c257</color>
+
+    <color name="list_item_color">#3C4F77</color>
+
+    <color name="icon_background">#586E73</color>
+
+    <!-- LED -->
+
+    <!-- PRESET -->
+
+</resources>

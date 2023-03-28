@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.widget.ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp">
+
+        <android.widget.LinearLayout
+            android:id="@+id/linear_layouts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/atak_layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/atak_side_pane"
+                android:textSize="24sp" />
+
+            <android.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/panelFullscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/btn_gray"
+                    android:backgroundTint="#808080"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/display_fullscreen"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/spSideHalf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/btn_gray"
+                    android:backgroundTint="#808080"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/display_side_half"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/spSideThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/btn_gray"
+                    android:backgroundTint="#808080"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/display_side_third"
+                    android:textColor="#000000" />
+
+            </android.widget.LinearLayout>
+
+            <android.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/spBottomHalf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/btn_gray"
+                    android:backgroundTint="#808080"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/display_bottom_half"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/spBottomThird"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/btn_gray"
+                    android:backgroundTint="#808080"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/display_bottom_third"
+                    android:textColor="#000000" />
+
+            </android.widget.LinearLayout>
+
+            <TextView
+                android:id="@+id/android_layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/layout_android"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/layout_relative" />
+
+            <include layout="@layout/demo_relative" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/layout_constraint" />
+
+            <include layout="@layout/demo_constraint" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:text="@string/programmatic_recycler_view" />
+
+        </android.widget.LinearLayout>
+
+    </android.widget.ScrollView>
+
+
+</android.widget.LinearLayout>

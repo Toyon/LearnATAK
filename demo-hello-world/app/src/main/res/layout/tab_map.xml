@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.widget.ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topic_android_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/map_label_icon_marker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/map_category_icon_model"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/map_show_icons"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="8dp"
+                android:text="@string/map_icon"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_label_icon_marker" />
+
+            <Button
+                android:id="@+id/map_show_models"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignStart="@+id/map_show_icons"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="8dp"
+                android:text="@string/vehicle_models"
+                app:layout_constraintBaseline_toBaselineOf="@+id/map_show_icons"
+                app:layout_constraintLeft_toRightOf="@+id/map_show_icons" />
+
+            <Button
+                android:id="@+id/map_create_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="8dp"
+                android:text="@string/marker_car"
+                android:textColor="#000000"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_show_icons" />
+
+            <Button
+                android:id="@+id/map_create_cot_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="8dp"
+                android:text="@string/marker_cot"
+                android:textColor="#000000"
+                app:layout_constraintBaseline_toBaselineOf="@+id/map_create_marker"
+                app:layout_constraintLeft_toRightOf="@+id/map_create_marker" />
+
+            <TextView
+                android:id="@+id/zoom_level_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/map_category_zoom"
+                app:layout_constraintTop_toBottomOf="@+id/map_create_marker" />
+
+            <HorizontalScrollView
+                android:id="@+id/scroll_zoom_levels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/zoom_level_label">
+
+                <android.widget.LinearLayout
+                    android:id="@+id/zoom_levels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tilt_angle_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/map_category_tilt"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_zoom_levels" />
+
+            <android.widget.LinearLayout
+                android:id="@+id/tilt_angles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tilt_angle_label" />
+
+            <TextView
+                android:id="@+id/layer_shape_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/map_category_layer_draw"
+                app:layout_constraintTop_toBottomOf="@+id/tilt_angles" />
+
+            <Button
+                android:id="@+id/map_add_img_layer"
+                style="@style/darkButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:text="@string/add_image_layer"
+                app:layout_constraintTop_toBottomOf="@+id/layer_shape_label" />
+
+            <Button
+                android:id="@+id/map_add_rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="4dp"
+                android:text="@string/add_rectangle"
+                app:layout_constraintTop_toBottomOf="@+id/map_add_img_layer" />
+
+            <Button
+                android:id="@+id/map_add_walk_route"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="4dp"
+                android:text="@string/add_walk_route"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/route_label" />
+
+            <TextView
+                android:id="@+id/route_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/map_category_routes"
+                app:layout_constraintTop_toBottomOf="@+id/map_add_rectangle" />
+
+            <Button
+                android:id="@+id/map_add_fly_route"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="4dp"
+                android:text="@string/add_fly_route"
+                app:layout_constraintBaseline_toBaselineOf="@+id/map_add_walk_route"
+                app:layout_constraintLeft_toRightOf="@id/map_add_walk_route" />
+
+            <Button
+                android:id="@+id/map_toggle_flight"
+                style="@style/darkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:text="@string/start_fly"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_add_walk_route" />
+
+            <Button
+                android:id="@+id/map_focus_item"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_gray"
+                android:backgroundTint="#808080"
+                android:padding="4dp"
+                android:text="@string/focus_model"
+                app:layout_constraintBaseline_toBaselineOf="@+id/map_toggle_flight"
+                app:layout_constraintLeft_toRightOf="@id/map_toggle_flight" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </android.widget.ScrollView>
+</android.widget.LinearLayout>
