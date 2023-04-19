@@ -67,3 +67,5 @@ Another enhancement to your application user interface would be the utilization 
 ## [Services](https://developer.android.com/guide/components/services)
 
 There are a variety of different types of services, but they all essentially provide a mechanism for your application to perform long-running operations in the background as they do not provide a user interface element. They are generally more resilient to users navigating between applications as their lifecycle is determined by other factors. Understand the difference between Foreground, Background, and Bound services weighing the pros and cons of using each one. [&#8657;](#contents)
+
+[Go to Section 4: TAK Overview](https://github.com/Toyon/LearnATAK/blob/master/doc/4_TAK_Overview.md)

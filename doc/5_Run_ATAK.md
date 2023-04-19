@@ -74,3 +74,6 @@ By default all applications on your Android device will have the *"Install unkno
 - On devices running Android 7.1.1 (API level 25) and lower, users must either enable the **Unknown sources** system setting or allow a single installation of an unknown app.
 
 For more information from the official docs about installing unknown apps check out this [link](https://developer.android.com/studio/publish#publishing-unknown).
+
+
+[Go to Section 6: Develop / Run ATAK Plugins](https://github.com/Toyon/LearnATAK/blob/master/doc/6_ATAK_Plugin.md)

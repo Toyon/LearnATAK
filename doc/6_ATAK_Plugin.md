@@ -288,3 +288,5 @@ The following links point to key areas within the ATAK project that a developer 
 
 - `compileSdkVersion 30` & `targetSdkVersion 30`
 
+
+[Go to Section 7: ATAK Quick Reference](https://github.com/Toyon/LearnATAK/blob/master/doc/7_ATAK_Quick_Reference.md)

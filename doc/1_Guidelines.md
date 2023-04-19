@@ -32,4 +32,4 @@ Provide a brief descriptive issue name in the "Title" field. Then fill out the r
 
 ```
 
-[Section 2: Android Studio Setup](https://github.com/Toyon/LearnATAK/blob/master/doc/2_Android_Studio_Setup.md)
+[Go to Section 2: Android Studio Setup](https://github.com/Toyon/LearnATAK/blob/master/doc/2_Android_Studio_Setup.md)

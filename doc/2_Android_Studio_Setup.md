@@ -44,3 +44,5 @@ If this is your first time using Android Studio or an IntelliJ IDE we recommend 
 - [Building and Running Applications](https://developer.android.com/studio/run)
 - [Project File Views](https://developer.android.com/studio/projects#ProjectFiles)
 - [Layout Editor Overview](https://developer.android.com/studio/write/layout-editor)
+
+[Go to Section 3: Android Basics](https://github.com/Toyon/LearnATAK/blob/master/doc/3_Android_Basics.md)

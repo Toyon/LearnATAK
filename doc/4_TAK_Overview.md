@@ -55,3 +55,5 @@ Information in this section is derived from the following sources which is good 
 [ATAK Civilian Tutorial Video Series for how to use ATAK (YouTube)](https://www.youtube.com/playlist?list=PLD4gdaBHX0b7GpPkuy0mbPaCw9kG3YgfB)
 
 [Technical blog articles on ATAK](https://www.ballantyne.online/category/atak/)
+
+[Go to Section 5: Install and Run ATAK](https://github.com/Toyon/LearnATAK/blob/master/doc/5_Run_ATAK.md)
