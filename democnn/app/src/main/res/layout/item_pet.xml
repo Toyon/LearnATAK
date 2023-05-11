@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_gray">
+
+    <ImageView
+        android:id="@+id/imgPreview"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        tools:srcCompat="@drawable/ic_paw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/animalType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Black Lab"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imgPreview"
+        app:layout_constraintTop_toTopOf="@+id/imgPreview"/>
+
+    <TextView
+        android:id="@+id/labelConfidence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="(Dog 95%)"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/animalType"
+        app:layout_constraintTop_toTopOf="@+id/animalType"
+        app:layout_constraintBottom_toBottomOf="@+id/animalType"/>
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Name tag on collar says 'Pepper'"
+        android:textSize="14sp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/imgPreview"
+        app:layout_constraintTop_toBottomOf="@+id/animalType"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMapFocus"/>
+
+    <TextView
+        android:id="@+id/extraDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="4/12/23 11:00am \@ dog park"
+        android:textSize="14sp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/imgPreview"
+        app:layout_constraintTop_toBottomOf="@+id/notes"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMapFocus"/>
+
+    <ImageButton
+        android:id="@+id/buttonMapFocus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_focus"
+        android:tint="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDetails"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFF"
+        tools:ignore="ContentDescription,UseAppTint,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/buttonDetails"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/ic_id"
+        android:tint="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFF"
+        tools:ignore="ContentDescription,UseAppTint,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

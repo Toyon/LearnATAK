@@ -17,6 +17,6 @@ Welcome to the Learn ATAK project. The following is an outline of the intended o
 6. [How to install and run ATAK-CIV](./5_Run_ATAK.md)
 7. [How to develop run and begin developing a plugin](./6_ATAK_Plugin.md)
 8. [Hello World Demo Plugin](../demo-hello-world/README.md)
-9. [Camera Demo Plugin](../demo-camera/README.md)
-9. [AI Demo Plugin](../demo-ai/README.md)
+9. [Camera Demo Plugin](../democamera/README.md)
+9. [AI/ML Demo Plugin](../democnn/README.md)
 

@@ -56,4 +56,6 @@ Information in this section is derived from the following sources which is good 
 
 [Technical blog articles on ATAK](https://www.ballantyne.online/category/atak/)
 
+<br>
+
 [Go to Section 5: Install and Run ATAK](https://github.com/Toyon/LearnATAK/blob/master/doc/5_Run_ATAK.md)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pet Finder CNN</string>
+    <string name="app_desc">
+        This plugin demonstrate integration of convolutional neural networks into ATAK
+    </string>
+    <string name="version_ncnn_cam">v0.36</string>
+
+    <!-- Form -->
+    <string name="label_animal_type">Animal Type*</string>
+    <string name="hint_animal_type">Required animal type</string>
+    <string name="label_location">Location Name</string>
+    <string name="hint_location">park, address, etc</string>
+    <string name="label_note">Extra Notes</string>
+    <string name="hint_note">Optional extra details</string>
+    <string name="label_map_location_setter">
+        Use the map center cross-hair to mark the sighting location
+    </string>
+    <string name="submit">Submit</string>
+</resources>

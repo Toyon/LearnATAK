@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/btn_gray"
+    android:backgroundTint="#4E4E4E">
+
+    <ImageView
+        android:id="@+id/croppedImg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        tools:srcCompat="@drawable/ic_paw"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/animalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ANIMAL LABEL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/croppedImg"/>
+
+    <TextView
+        android:id="@+id/certainty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="30%"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalLabel"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
