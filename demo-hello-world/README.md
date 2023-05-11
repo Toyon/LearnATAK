@@ -1,4 +1,4 @@
-# Hello World Demo Plugin  
+# <img src="./app/src/main/res/drawable/ic_world.png" height="64px"/>Hello World Demo Plugin  
 
 This plugin was developed to showcase how to use common Android components within an ATAK plugin and provide examples of ATAK API methods. The goal of this plugin is to be a well documented resource of "how-to" guides for implementing commonly desired application capabilities. When loaded, the plugin can be found in the ATAK [tools](../doc/7_ATAK_Quick_Reference.md/#toolbar) as a mesh globe icon <img src="./app/src/main/res/drawable/ic_world.png" height="32px"/>.
 The plugin pane is organized into 3 major categories denoted by the following tab icons: 
@@ -15,43 +15,36 @@ The plugin pane is organized into 3 major categories denoted by the following ta
 
 Quick Reference if you are building/running this plugin for the first time.
 
-1. On **line 16** of `demo-hello-world/app/build.gradle` change `def` to `ext.` to look like below
-
-   ```groovy
-   // app/build.gradle 
-   ext.getValueFromPropertiesFile = { propFile, key ->
-   ```
-
-2. Build the application signing keys which are required by the Android Operating System (OS) for security when installing software packages.
+1. Build the application signing keys which are required by the Android Operating System (OS) for security when installing software packages.
    At the bottom of the IDE there should be a *Terminal* tab you can open to launch a terminal session in the root folder of the plugin. 
 
-   ```sh
-   # Run the following commands in your Android Studio Terminal
-   # Generate Debug signing key: set "alias", "keypass", and "storepass" flag values as desired
-   keytool -genkeypair -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -keystore debug.keystore -alias androiddebugkey -keypass android -storepass android 
-   
-   # Generate Release signing key: set "alias", "keypass", and "storepass" flag values as desired
-   keytool -genkeypair -dname "CN=Android Release,O=Android,C=US" -validity 9999 -keystore release.keystore -alias androidreleasekey -keypass android -storepass android 
-   ```
+```sh
+# Run the following commands in your Android Studio Terminal
+# Generate Debug signing key: set "alias", "keypass", and "storepass" flag values as desired
+keytool -genkeypair -dname "CN=Android Debug,O=Android,C=US" -validity 9999 -keystore debug.keystore -alias androiddebugkey -keypass android -storepass android 
 
-3. Edit the `demo-hello-world/local.properties` file to add the following lines. 
+# Generate Release signing key: set "alias", "keypass", and "storepass" flag values as desired
+keytool -genkeypair -dname "CN=Android Release,O=Android,C=US" -validity 9999 -keystore release.keystore -alias androidreleasekey -keypass android -storepass android 
+```
+
+2. Edit the `demo-hello-world/local.properties` file to add the following lines. 
    `<ANDROID_SDK_PATH>` and the `sdk.dir` should already be filled out by the IDE with the default Android SDK file path
    `<ABSOLUTE_PLUGIN_PATH>` should be a complete file path to the root plugin folder;
     example plugin path: `C\:\\tak\\atak-civ-sdk-4.5.1.13\\atak-civ\\plugin-examples\\helloworld` 
 
-   ```ini
-   # the sdk.dir should be automatically assigned to the path of your Android Studio SDK 
-   sdk.dir=<ANDROID_SDK_PATH>  
-   takDebugKeyFile=<ABSOLUTE_PLUGIN_PATH>\\debug.keystore
-   takDebugKeyFilePassword=android
-   takDebugKeyAlias=androiddebugkey
-   takDebugKeyPassword=android
-   
-   takReleaseKeyFile=<ABSOLUTE_PLUGIN_PATH>\\release.keystore
-   takReleaseKeyFilePassword=android
-   takReleaseKeyAlias=androidreleasekey
-   takReleaseKeyPassword=android
-   ```
+```ini
+# the sdk.dir should be automatically assigned to the path of your Android Studio SDK 
+sdk.dir=<ANDROID_SDK_PATH>  
+takDebugKeyFile=<ABSOLUTE_PLUGIN_PATH>\\debug.keystore
+takDebugKeyFilePassword=android
+takDebugKeyAlias=androiddebugkey
+takDebugKeyPassword=android
+
+takReleaseKeyFile=<ABSOLUTE_PLUGIN_PATH>\\release.keystore
+takReleaseKeyFilePassword=android
+takReleaseKeyAlias=androidreleasekey
+takReleaseKeyPassword=android
+```
 
 ## Logcat Filter
 
