@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Y.D.S. Class Estimator</string>
+    <string name="app_icon_desc">Plugin Icon</string>
+    <string name="app_desc">This plugin uses a trained neural network to estimate the Yosemite Decimal System rating of a hiking or climbing route from user-taken images. Take a photo of a potential route to estimate the YDS class. Ensure that only the specific route in question is within the image (for example, do not include both a maintained trail and a sheer cliff face in the same image). Avoid including non-natural objects in the image, such as people or equipment.</string>
+    <string name="classified_image">Classified Image</string>
+    <string name="home_instructions">Press the Home button to take another image</string>
+    <string name="take_pic">Take Picture</string>
+    <string name="set_trail_location">Mark Trail Location</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Plant Classifier</string>
+    <!-- description -->
+    <string name="app_desc">This plugin classifies plantEntity and determines if they are edible</string>
+    <string name="demoCase">Demo Text</string>
+
+    <string name="picture_capture_advice">Ensure picture taken has the plant fill the frame</string>
+
+    <string name="label_location_name">Location Name</string>
+    <string name="hint_location_name">park, address, etc</string>
+    <string name="label_extra_notes">Extra Notes</string>
+    <string name="hint_extra_notes">optional extra details</string>
+    <string name="save">Save Record</string>
+
+
+
+</resources>

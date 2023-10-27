@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Template Camera</string>
+    <!-- description -->
+    <string name="app_desc">This plugin demonstrate bare bones plugin UI, and may be used to start a new plugin project</string>
+
+    <!-- remove these as layouts are modified -->
+    <string name="open_sample_pane">Open Sample Pane</string>
+    <string name="example_pane">Example Pane</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="go_back">Go Back</string>
+
+
+</resources>

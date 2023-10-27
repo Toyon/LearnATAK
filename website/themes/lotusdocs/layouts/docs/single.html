@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <!-- override Prism's default copy messages to 'empty'. Required by CSS styling.
+         see: https://prismjs.com/plugins/copy-to-clipboard/#styling -->
+    <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+        {{ .Content }}
+    </div>
+
+    {{ if and .GitInfo .Site.Params.docs.ghrepo -}}
+        {{ partial (printf "%s/%s" (.Site.Params.docs.pathName | default "docs") "gitinfo") . }}
+    {{ end -}}
+
+    {{ if .Site.Params.feedback.enabled | default false -}}
+        {{ if or (.Site.Params.plausible.dataDomain) (.Site.GoogleAnalytics) }}
+            {{- partial (printf "%s/%s" (.Site.Params.docs.pathName | default "docs") "footer/feedback.html") . -}}
+        {{ else }}
+            {{ errorf "Either Google Analytics or Plausible Analytics must be configured before enabling the Feedback Widget." }}
+        {{ end }}
+    {{ end -}}
+
+{{ end }}

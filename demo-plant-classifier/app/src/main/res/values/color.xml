@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- COMMON -->
+    <color name="white">#ffffff</color>
+    <color name="darker_gray">#121212</color>
+
+    <color name="dark_neon_green">#33AE38</color>
+
+    <color name="green_dark_btn_base_gradient">#1E271E</color>
+    <color name="green_light_btn_base_gradient">#19671A</color>
+    <color name="border_green_btn_base">#838080</color>
+
+    <color name="green_dark_btn_selected_gradient">#0F6111</color>
+    <color name="green_light_btn_selected_gradient">#08CD0C</color>
+    <color name="border_green_btn_selected">#17b219</color>
+
+    <color name="green_btn_disabled">#202B20</color>
+    <color name="border_green_btn_disabled">#1C1E1D</color>
+
+    <color name="bg_gray">#17F1F1F1</color>
+    <color name="gray_slate">#78909C</color>
+    <color name="brown_dark">#250A01</color>
+    <color name="brown_tab">#BD8966</color>
+    <color name="brown_light">#402608</color>
+
+</resources>

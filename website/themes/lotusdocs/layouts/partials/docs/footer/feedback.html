@@ -1,0 +1,194 @@
+<div id="feedback-widget" class="feedback-container pt-4">
+    <div id="feedback-init" class="d-flex justify-content-md-start justify-content-sm-center">
+        <span class="fs-5 fw-bold me-2 align-self-center">{{ i18n "feedback_helpful" | default "Was this page helpful?" }}</span>
+        <div class="d-flex">
+            <button id="posBtn" class="feedback-btn btn btn-primary btn-sm me-2" type="submit">
+                <span class="fs-6">
+                    <i class="material-icons size-20 me-1 align-middle">thumb_up</i>
+                    {{ i18n "feedback_yes" | default "Yes" }}
+                </span>
+            </button>
+            <button id="negBtn" class="feedback-btn btn btn-primary btn-sm me-2" type="submit">
+                <span class="fs-6">
+                    <i class="material-icons me-1 align-middle">thumb_down</i>
+                    {{ i18n "feedback_no" | default "No" }}
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div id="feedback-end" class="d-flex justify-content-md-start justify-content-sm-center fs-4 fw-bold me-2">
+    </div>
+
+    <div id="feedback-form-pos" data-type="positive" class="feedback-form justify-content-md-start justify-content-sm-center">
+        <p class="fw-bold fs-5">{{ .Site.Params.feedback.positiveFormTitle | default "What did you like?" }}</p>
+
+        {{ range $index, $value := .Site.Params.feedback.positiveForm }}
+            {{ $rating := (index . 0) }}
+            {{ $description := (index . 1) }}
+            <div class="form-check pb-1">
+                <input class="form-check-input" type="radio" name="feedback" autocomplete="off" value="{{ $rating | lower }}" id="radio{{ $index }}Pos" required>
+                <label class="form-check-label" for="radio{{ $index }}Pos">
+                    {{ $rating }}
+                    {{ if $description }}
+                        <p class="feedback-radio-desc fw-normal mb-0">{{ $description }}</p>
+                    {{ end }}
+                </label>
+            </div>
+            <div id="radio{{ $index }}PosTextContainer" class="feedback-textarea-container"></div>
+        {{ end }}
+
+    </div>
+
+    <div id="feedback-form-neg" data-type="negative" class="feedback-form justify-content-sm-center">
+        <p class="fw-bold fs-5">{{ .Site.Params.feedback.negativeFormTitle | default "What went wrong?" }}</p>
+
+        {{ range $index, $value := .Site.Params.feedback.negativeForm }}
+            {{ $rating := (index . 0) }}
+            {{ $description := (index . 1) }}
+            <div class="form-check pb-1">
+                <input class="form-check-input" type="radio" name="feedback" autocomplete="off" value="{{ $rating | lower }}" id="radio{{ $index }}Neg" required>
+                <label class="form-check-label" for="radio{{ $index }}Neg">
+                    {{ $rating }}
+                    {{ if $description }}
+                        <p class="feedback-radio-desc fw-normal mb-0">{{ $description }}</p>
+                    {{ end }}
+                </label>
+            </div>
+            <div id="radio{{ $index }}NegTextContainer" class="feedback-textarea-container"></div>
+        {{ end }}
+
+    </div>
+
+    <div id="feedback-submit-container">
+        <button id="feedback-submit-button" class="feedback-submit-btn btn btn-primary mt-3" role="button" type="submit" disabled>
+            <span class="fs-6">
+                {{ i18n "feedback_submit" | default "Submit" }}
+            </span>
+        </button>
+    </div>
+
+</div>
+
+<script>
+    // https://stackoverflow.com/a/29017547
+    const feedbackInit = document.getElementById("feedback-init");
+    const posBtn = document.getElementById("posBtn");
+    const negBtn = document.getElementById("negBtn");
+    const feedbackBtn = document.querySelectorAll('.feedback-btn');
+    const feedbackFormPos = document.getElementById("feedback-form-pos");
+    const feedbackFormNeg = document.getElementById("feedback-form-neg");
+    const feedbackSubmitBtn = document.getElementById("feedback-submit-button");
+    const feedbackSubmitContainer = document.getElementById("feedback-submit-container");
+
+    // Show feedback form
+    feedbackBtn.forEach(btn => {
+        btn.addEventListener('click', event => {
+            const btnID = btn.id
+            feedbackInit.style.opacity = '0'
+            feedbackInit.addEventListener('transitionend', function () {
+                feedbackInit.remove();
+                if (btnID == 'posBtn') {
+                    feedbackFormPos.classList.add("is-visible");
+                    feedbackFormNeg.remove();
+                    feedbackSubmitContainer.classList.add("is-visible");
+                } else if (btnID == 'negBtn') {
+                    feedbackFormNeg.classList.add("is-visible");
+                    feedbackFormPos.remove();
+                    feedbackSubmitContainer.classList.add("is-visible");
+                }
+            }
+            );
+        })
+    });
+
+    // Add text area box to selected feedback radio
+    const Radios = document.querySelectorAll('input[name="feedback"]');
+    const textareas = document.querySelectorAll('.feedback-textarea-container');
+
+    Radios.forEach(radio => {
+        radio.addEventListener('change', function(event) {
+            const radioID = event.target.id;
+            const addOn = document.getElementById(radioID+"TextContainer");
+            // First, remove 'activeBox' class and <textarea> from all textarea containers
+            for (const textarea of textareas) {
+                while (textarea.firstChild) {
+                    textarea.removeChild(textarea.firstChild);
+                }
+            }
+            addOn.innerHTML +='<textarea id="textarea" cols="55" maxlength="500" rows="3" placeholder="(Optional) Try to be as specific and detailed as possible!" type="text" class="feedback-textarea p-2 mb-2"></textarea>';
+            feedbackSubmitBtn.removeAttribute("disabled");
+            // console.log(radioID);
+        });
+    });
+
+    // Submit feedback to Google or Plausible analytics
+    feedbackSubmitBtn.addEventListener('click', event => {
+        const form = document.querySelector('.feedback-form');
+        const formType = form.getAttribute("data-type");
+        const result = document.getElementById("feedback-end");
+        const selected = document.querySelector('input[name="feedback"]:checked').value;
+        const message = document.getElementById('textarea').value;
+        function success(e) {
+            form.remove();
+            feedbackSubmitContainer.remove();
+            result.innerHTML = '{{ .Site.Params.feedback.successMsg | default "Thank you for helping to improve our documentation!" }}';
+            result.classList.add("is-visible");
+        }
+        try {
+            if (formType == "positive") {
+                {{ if .Site.GoogleAnalytics -}}
+                gtag('event', '{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.positiveEventName | default "Positive Feedback" | lower) }}',
+                    {
+                        'rating': selected,
+                        'message': message,
+                        'event_callback': success
+                    }
+                ),
+                {{ end -}}
+                {{ if .Site.Params.plausible.dataDomain -}}
+                plausible('{{ .Site.Params.feedback.positiveEventName | default "Positive Feedback" }}',
+                    {
+                        callback: success,
+                        props:
+                        {
+                            selection: selected,
+                            message: message
+                        }
+                    }
+                )
+                {{ end -}}
+            } else if (formType == "negative") {
+                {{ if .Site.GoogleAnalytics -}}
+                gtag('event', '{{ replaceRE `( {1,})` "_" (.Site.Params.feedback.negativeEventName | default "Positive Feedback" | lower) }}',
+                    {
+                        'rating': selected,
+                        'message': message,
+                        'event_callback': success
+                    }
+                ),
+                {{ end -}}
+                {{ if .Site.Params.plausible.dataDomain -}}
+                plausible('{{ .Site.Params.feedback.negativeEventName | default "Negative Feedback" }}',
+                    {
+                        callback: success,
+                        props:
+                        {
+                            selection: selected,
+                            message: message
+                        }
+                    }
+                )
+                {{ end -}}
+            }
+        } catch (err) {
+            console.log(err);
+            form.remove();
+            feedbackSubmitContainer.remove();
+            result.innerHTML = '{{ .Site.Params.feedback.errorMsg | default "Sorry! There was an error while attempting to submit your feedback!" }}';
+            result.classList.add("is-visible");
+        }
+        // console.log("feedback submitted")
+    });
+
+</script>

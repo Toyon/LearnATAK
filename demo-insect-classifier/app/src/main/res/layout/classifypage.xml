@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green">
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:textSize="20sp"
+        android:text="@string/classify_page_title"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="75dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_to_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img_preview" />
+
+    <Button
+        android:id="@+id/back_to_main"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/img_label_txt"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/lavender"
+        android:gravity="center"
+        android:text="@string/unable_to_classify"
+        android:fontFamily="monospace"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_preview" />
+
+    <ImageView
+        android:id="@+id/img_preview"
+        android:contentDescription="@string/img_preview_desc"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/ic_bug"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/img_label_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

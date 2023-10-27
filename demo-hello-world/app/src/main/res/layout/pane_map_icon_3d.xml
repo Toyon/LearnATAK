@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nav_help_msg"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.atakmap.android.demohelloworld.list.DynamicGridView
+    <com.toyon.demohelloworld.list.DynamicGridView
         android:id="@+id/models_grid"
         android:layout_width="0dp"
         android:layout_height="0dp"

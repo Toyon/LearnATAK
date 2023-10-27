@@ -1,13 +1,14 @@
-# <img src="./app/src/main/res/drawable/ic_world.png" height="64px"/>Hello World Demo Plugin  
+# <img src="./app/src/main/res/drawable/ic_world.png" height="64px"/>Demo Hello World Plugin  
 
-This plugin was developed to showcase how to use common Android components within an ATAK plugin and provide examples of ATAK API methods. The goal of this plugin is to be a well documented resource of "how-to" guides for implementing commonly desired application capabilities. When loaded, the plugin can be found in the ATAK [tools](../doc/7_ATAK_Quick_Reference.md/#toolbar) as a mesh globe icon <img src="./app/src/main/res/drawable/ic_world.png" height="32px"/>.
+This plugin was developed to showcase how to use common Android components within an ATAK plugin and provide examples of ATAK API methods. The goal of this plugin is to be a well documented resource of "how-to" guides for implementing commonly desired application capabilities. When loaded, the plugin can be found in the ATAK [tools](../website/content/docs/atak_development/atak_quick_reference.md/#toolbar--toolbar-items) as a mesh globe icon <img src="./app/src/main/res/drawable/ic_world.png" height="32px"/>.
 The plugin pane is organized into 3 major categories denoted by the following tab icons: 
 
-- <img src="./app/src/main/res/drawable/ic_brand_android.png" height="48px"/>[Core Components](./doc/CoreComponents.md): Buttons, Text Views, Image Views, Notifications, Services, Resources, Threads
-- <img src="./app/src/main/res/drawable/ic_layout.png" height="48px"/>[Layouts](./doc/Layouts.md): Relative Layout, Constraint Layout, Linear Layout, Recycler View, Grid View, Plugin Pane
-- <img src="./app/src/main/res/drawable/ic_map.png" height="48px"/>[Mapping](./doc/Mapping.md): Markers, Icons, Zoom, Tilt, Cursor-On-Target (CoT), Layers, 3D Models, Routes, Navigation
+- <img src="./app/src/main/res/drawable/ic_brand_android.png" height="48px"/>[Core Components](../website/content/docs/example_plugins/demo-hello-world/core_components.md): Buttons, Text Views, Image Views, Notifications, Services, Resources, Threads
+- <img src="./app/src/main/res/drawable/ic_layout.png" height="48px"/>[Layouts](../website/content/docs/example_plugins/demo-hello-world/layouts.md): Relative Layout, Constraint Layout, Linear Layout, Recycler View, Grid View, Plugin Pane
+- <img src="./app/src/main/res/drawable/ic_map.png" height="48px"/>[Mapping](../website/content/docs/example_plugins/demo-hello-world/mapping.md): Markers, Icons, Zoom, Tilt, Cursor-On-Target (CoT), Layers, 3D Models, Routes, Navigation
 
-![ATAK Demo Hello World Flight](../img/ATAK-Hello-Flight.gif)
+![ATAK Demo Hello World Flight](../website/assets/image/plugin/demo-hello-world-flight.gif)
+
 
 *We suggest exploring each tab from left to right building from the core components to the ATAK mapping specifics. If there are any ATAK API features that you find and believe would be common use for plugin developers please open an issue to make a request for an example to be included in this plugin.*
 
@@ -30,7 +31,7 @@ keytool -genkeypair -dname "CN=Android Release,O=Android,C=US" -validity 9999 -k
 2. Edit the `demo-hello-world/local.properties` file to add the following lines. 
    `<ANDROID_SDK_PATH>` and the `sdk.dir` should already be filled out by the IDE with the default Android SDK file path
    `<ABSOLUTE_PLUGIN_PATH>` should be a complete file path to the root plugin folder;
-    example plugin path: `C\:\\tak\\atak-civ-sdk-4.5.1.13\\atak-civ\\plugin-examples\\helloworld` 
+    example plugin path: `C\:\\tak\\atak-civ-sdk-4.5.1.13\\atak-civ\\learnatak\\demo-hello-world` 
 
 ```ini
 # the sdk.dir should be automatically assigned to the path of your Android Studio SDK 
@@ -51,7 +52,7 @@ takReleaseKeyPassword=android
 Copy and paste this in the filter field of the [Logcat](https://developer.android.com/studio/debug/logcat) to make it easier to follow the feed of log messages that are printed by the hello world plugin to help further your understanding of the code in the project. 
 
 ```bash
-package:com.atakmap.app.civ package:com.atakmap.android.demohelloworld.plugin  -tag:emuglGLESv2_enc -tag:chatty -tag:GLMapRenderer -tag:GLQuadTileNode4 -tag:CommsMapComponentCommo -tag:MobacTileClient2 
+package:com.atakmap.app.civ package:com.toyon.demohelloworld.plugin  -tag:emuglGLESv2_enc -tag:chatty -tag:GLMapRenderer -tag:GLQuadTileNode4 -tag:CommsMapComponentCommo -tag:MobacTileClient2 
 ```
 
 The Logcat window in Android Studio helps you debug your plugin by displaying logs from your device in real time as ATAK is running. The first two filters with `package:*` will restrict all log messages that are emitted by ATAK and the plugin. By utilizing `Log.d(TAG, "message")` for debug, `Log.e()` for errors, `Log.w()` for warnings or `Log.i()` for info, you will be able to filter your [logs by levels](https://developer.android.com/reference/android/util/Log) to see more or less information.
@@ -72,7 +73,7 @@ When trying to find the code behind a UI element go to [`app/src/main/res/layout
 
 **Package Organization**
 
-`com.atakmap.android.demohelloworld`: The root package contains classes for the plugins Broadcast Receivers, referred to as Dropdown Receivers in ATAK, which act as entry points for the logic driving the UI elements within Panes that are displayed for the plugin content of that dropdown. Additionally included in this main package is the map component that initializes the receivers, a demonstration service class and a set of utility functions to reduce boilerplate code.
+`com.toyon.demohelloworld`: The root package contains classes for the plugins Broadcast Receivers, referred to as Dropdown Receivers in ATAK, which act as entry points for the logic driving the UI elements within Panes that are displayed for the plugin content of that dropdown. Additionally included in this main package is the map component that initializes the receivers, a demonstration service class and a set of utility functions to reduce boilerplate code.
 
 -  `fragments`: Implements the functionality of UI elements for each tab display
 - `list`: Custom and necessary classes for implementing optimized displays of list items

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#054028"
+    android:orientation="vertical">
+
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/home"
+            android:backgroundTint="#C6D8C7"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <ImageView
+            android:id="@+id/captured_yds"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/classification_result"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/classification_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp"
+            tools:text="Classification txt"/>
+
+    <Button
+        android:id="@+id/mark_location"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="@string/set_trail_location"
+        android:background="@drawable/btn_gray"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</android.widget.LinearLayout>
+
+

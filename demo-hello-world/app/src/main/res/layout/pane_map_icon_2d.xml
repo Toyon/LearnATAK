@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nav_help_msg"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.atakmap.android.demohelloworld.list.DynamicRecyclerView
+    <com.toyon.demohelloworld.list.DynamicRecyclerView
         android:id="@+id/icon_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.widget.ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#401305"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="424dp">
+
+        <android.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fragment_container"
+                android:name="com.toyon.plantclassifier.PlantFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#013303"
+                android:backgroundTint="#033C05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/home_button"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/home"
+                    android:backgroundTint="#C6D8C7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/back_arrow"
+                    android:backgroundTint="#C5D6C6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/captured_plant"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/scientific_name"
+                    tools:ignore="ContentDescription"
+                    tools:srcCompat="@drawable/plant1" />
+
+                <TextView
+                    android:id="@+id/scientific_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/common_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="PLANT LABEL" />
+
+                <TextView
+                    android:id="@+id/common_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/certainty_level"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Indoor Green Plant" />
+
+                <TextView
+                    android:id="@+id/certainty_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/edibility"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="40% Confidence" />
+
+                <TextView
+                    android:id="@+id/edibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Delicious" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <android.widget.TextView
+                android:id="@+id/label_location_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/label_location_name"
+                android:textColor="@color/dark_neon_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.widget.EditText
+                android:id="@+id/entry_location"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:gravity="top|start"
+                android:hint="@string/hint_location_name"
+                android:lines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp"
+                android:textColorHint="@color/gray_slate" />
+
+            <android.widget.TextView
+                android:id="@+id/label_extra_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/label_extra_notes"
+                android:textColor="@color/dark_neon_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <android.widget.EditText
+                android:id="@+id/entry_extra_notes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="top|start"
+                android:hint="@string/hint_extra_notes"
+                android:lines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp"
+                android:textColorHint="@color/gray_slate" />
+
+            <Button
+                android:id="@+id/save_record"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/dark_neon_green"
+                android:text="@string/save" />
+
+        </android.widget.LinearLayout>
+
+
+    </android.widget.ScrollView>
+</android.widget.LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#304C4A">
+
+    <android.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/camera_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_camera"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/camera_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:text="Camera "
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/calendar_button"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_calendar"
+            android:backgroundTint="@color/gray"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/calendar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:text=" Calendar"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/number_generator_button"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_generator"
+            android:backgroundTint="@color/gray"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/dice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:text="Num. Generator"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/draw_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_draw"
+            android:backgroundTint="@color/gray"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/draw_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:text="Draw"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/location_button"
+            android:layout_width="69dp"
+            android:layout_height="65dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_location"
+            android:backgroundTint="@color/gray"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:text="Location "
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/weather_button"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_weather"
+            android:backgroundTint="@color/gray"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/weather_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:text=" Weather"
+            android:textSize="20dp" />
+
+    </android.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:background="@drawable/btn_green">
+
+    <ImageView
+        android:id="@+id/img_preview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/common_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/img_preview"
+        app:layout_constraintTop_toTopOf="@id/img_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Common Name" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Location: "
+        app:layout_constraintStart_toStartOf="@+id/common_name"
+        app:layout_constraintTop_toBottomOf="@id/common_name" />
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Location text"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/img_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location" />
+
+    <Button
+        android:id="@+id/info_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background = "@drawable/ic_info"
+        android:backgroundTint="#C4EF92"
+        app:layout_constraintStart_toEndOf="@id/img_preview"
+        app:layout_constraintBottom_toBottomOf="@id/img_preview"/>
+
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5sp"
+        android:background = "@drawable/ic_location"
+        android:backgroundTint="#C4EF92"
+        app:layout_constraintStart_toEndOf="@id/info_button"
+        app:layout_constraintTop_toTopOf="@id/info_button"/>
+
+    <Button
+        android:id="@+id/trash_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5sp"
+        android:background = "@drawable/ic_trash"
+        android:backgroundTint="#C4EF92"
+        app:layout_constraintStart_toEndOf="@id/location_button"
+        app:layout_constraintTop_toTopOf="@id/info_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

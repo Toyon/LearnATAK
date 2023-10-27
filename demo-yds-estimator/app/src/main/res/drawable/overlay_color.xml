@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@drawable/mt_alice_tint" />
+        <item>
+            <shape android:shape="rectangle">
+                <solid android:color="#00000000" /> <!-- 80% opacity dark color -->
+            </shape>
+        </item>
+    </layer-list>
+
+</selector>

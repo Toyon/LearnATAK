@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Title-->
+    <TextView
+        android:id="@+id/parent_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/labels_background"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Category Label"
+        android:textColor="@color/brown_dark"
+        android:textSize="18sp" />
+
+    <android.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+
+        <!--Child RecyclerView-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/child_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.widget.LinearLayout >
+
+
+</android.widget.LinearLayout>

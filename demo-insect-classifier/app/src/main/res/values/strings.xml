@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Insect Classifier</string>
+    <!-- description -->
+    <string name="app_desc">This plugin demonstrate an insect classifier and may be used for safety or research</string>
+
+
+    <!--Label for top of home page with instructions to classify -->
+    <string name="classify_instructions"> Tap the camera icon to begin taking a picture of an insect</string>
+    <string name="tips">This plugin provides confidence metrics on your classifications. Delete and attempt to take a new picture if the certainty % is low, or if you believe the classification to be incorrect</string>
+    <!--Label for classify page at the top -->
+    <string name="classify_page_title"> YOUR INSECT CLASSIFICATION </string>
+    <string name="unable_to_classify">Unable to classify, please delete and try another picture</string>
+    <string name="img_preview_desc">Insect Image Preview</string>
+
+</resources>
+

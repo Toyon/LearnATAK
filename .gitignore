@@ -1,0 +1,6 @@
+public/
+/public/
+website/resources/_gen
+website/assets/jsconfig.json
+
+**/__pycache__/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Food Classifier</string>
+    <!-- description -->
+    <string name="app_desc">This plugin demonstrates the use of a food classifier TFlite model as well as data package creation and transfer.</string>
+
+    <string name="change_name">Change Name</string>
+    <string name="name">Name</string>
+    <string name="meal_rating">Assign Rating to Meal</string>
+    <string name="submit">Submit</string>
+
+
+</resources>

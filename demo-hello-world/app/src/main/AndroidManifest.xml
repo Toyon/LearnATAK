@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.atakmap.android.demohelloworld.plugin"
+    package="com.toyon.demohelloworld.plugin"
     tools:ignore="GoogleAppIndexingWarning">
 
     <application 
@@ -23,11 +23,11 @@
        </activity>
 
         <service
-            android:name="com.atakmap.android.demohelloworld.DemoService"
+            android:name="com.toyon.demohelloworld.DemoService"
             android:label="Demo Uptime Counting Service"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.atakmap.android.demohelloworld.service.DemoService"/>
+                <action android:name="com.toyon.demohelloworld.service.DemoService"/>
             </intent-filter>
         </service>
 

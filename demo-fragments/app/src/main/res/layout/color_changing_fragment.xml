@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/color_wheel"
+        android:layout_width="413dp"
+        android:layout_height="358dp"
+        android:background="@drawable/color_wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/hex_choice"
+        android:text = "HEX: "
+        app:layout_constraintTop_toBottomOf="@+id/color_wheel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/rgb_choice"
+        android:text = "RGB: "
+        app:layout_constraintTop_toBottomOf="@+id/hex_choice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:id = "@+id/color_choice"
+        app:layout_constraintTop_toBottomOf="@+id/rgb_choice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/change_color_button"
+        android:text = "Apply Color to Backgrounds"
+        app:layout_constraintEnd_toEndOf="@+id/color_choice"
+        app:layout_constraintLeft_toLeftOf="@+id/color_choice"
+        app:layout_constraintRight_toRightOf="@+id/color_choice"
+        app:layout_constraintStart_toStartOf="@+id/color_choice"
+        app:layout_constraintTop_toTopOf="@+id/color_choice"
+        app:layout_constraintBottom_toBottomOf="@+id/color_choice"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

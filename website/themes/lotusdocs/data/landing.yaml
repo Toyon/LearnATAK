@@ -1,0 +1,89 @@
+# Hero
+hero:
+  enable: true
+
+  badge:
+    text: v4.5.13
+    color: primary # primary, secondary, success, danger, warning, info, light, dark
+    pill: false # boolean
+    soft: true # boolean
+
+  titleLogo:
+    path: "image/"
+    filename: "learn-atak-logo.png"
+    alt: "ATAK Logo"
+    height: 80px
+
+  title: "Learn ATAK Documentation"
+  subtitle: "Welcome to the documentation website for learning about creating 
+    your own ATAK plugin. Here, you will find in-depth tutorials for setting 
+    up Android Studio, downloading the ATAK app, installing developer plugin builds, 
+    and Android programming fundamentals to help build your first ATAK plugin."
+
+  image:
+    path: "image/tak" # path to image under configured assets directory. default 'images'
+    filename: "atak-ui.png" # filename of your hero image (including file extension)
+    alt: "ATAK UI Screenshot" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: false # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "docs/"
+  cta2Button:
+    icon: construction
+    btnText: "Code Repository"
+    url: "https://github.com/Toyon/LearnATAK"
+    #url: "https://github.com/Toyon/LearnATAK"
+
+  info: "**Open Source** GNU Public License."
+
+
+## Resources 
+resources: 
+  enable: true
+  title: Resources
+  # subtitle: Links to important resources
+
+  items:
+
+    - title: TAK Official Website
+      icon: icon/svg/learn-atak-logo.svg
+      description: Click here for the official TAK website where you can find products and get more information. 
+      url: "https://tak.gov/"
+
+    - title: ATAK Reddit
+      icon: icon/svg/reddit.svg
+      description: ATAK's Wiki page with helpful information for developers. 
+      url: "https://www.reddit.com/r/ATAK/wiki/index/"
+    
+    - title: TAK Discord Chat 
+      icon: icon/svg/discord.svg
+      description: Come chat with other developers!
+      url: "https://discord.com/invite/xTdEcpc"
+
+    - title: ATAK User Guide v4.5
+      icon: icon/svg/guidelines.svg
+      description: The official guide for navigating ATAK, created by the US government.
+      url: "atak_resource/v4.5/ATAK_User_Guide.pdf"
+    
+    - title: ATAK Plugin Structure Guide 
+      icon: icon/svg/structure.svg
+      description: The official guide for your plugin's structure 
+      url: "atak_resource/v4.5/ATAK_Plugin_Structure_Guide.pdf"
+
+    - title: ATAK Plugin Development Guide 
+      icon: icon/svg/hammer.svg
+      description: The official guide for setting up Android studios and installing your first plugin 
+      url: "atak_resource/v4.5//ATAK_Plugin_Development_Guide.pdf"
+    
+    - title: All ATAK classes v4.5
+      icon: icon/svg/api.svg
+      description: A list of all classes created for ATAK that can be used to interact with the map and create plugins
+      url: "atak_resource/v4.5/atak-javadoc/allclasses-frame.html"
+    
+    - title: ATAK API Index v4.5
+      icon: icon/svg/search.svg
+      description: A list of all methods that were created for ATAK. A great resource to perform `command F` on to search for a specific function needed.
+      url: "atak_resource/v4.5/atak-javadoc/index-all.html"

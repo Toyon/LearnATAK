@@ -4,12 +4,12 @@
 
     <extension
         type="transapps.maps.plugin.lifecycle.Lifecycle"
-        impl="com.atakmap.android.demohelloworld.plugin.PluginHelloWorldLifecycle"
+        impl="com.toyon.demohelloworld.plugin.PluginHelloWorldLifecycle"
         singleton="true" />
 
     <extension
         type="transapps.maps.plugin.tool.ToolDescriptor"
-        impl="com.atakmap.android.demohelloworld.plugin.PluginHelloWorldTool"
+        impl="com.toyon.demohelloworld.plugin.PluginHelloWorldTool"
         singleton="true" />
 
 </plugin>

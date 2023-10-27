@@ -1,0 +1,4 @@
+<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+    {{ if os.FileExists "static/docs/favicon.svg" -}}
+    <link rel="shortcut icon" href="static/docs/favicon.ico" type="image/x-icon">  
+    {{ end -}}

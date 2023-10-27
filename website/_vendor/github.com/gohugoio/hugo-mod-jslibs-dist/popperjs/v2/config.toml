@@ -1,0 +1,4 @@
+[module]
+[[module.mounts]]
+source = "package/dist/cjs/popper.js"
+target = "assets/@popperjs/core.js"
